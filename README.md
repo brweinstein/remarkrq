@@ -6,7 +6,7 @@ The comments I received were:
 "Black-hole check must be colour-specific and use <= 0 after (- (star-fuel star) (* rate n))"
 "Return the rebuilt star directly (no recursion with n=0), include an else for other colours and never return a start with negative fuel".
 
-The question description does not state not to use recursion in this format and the data definition for star contains fuel as a num which does not state it must be negative. This implementation also ensures a star with negative fuel is never returned, but instead 'blackhole will be. Since we require a star to be passed into the function, only the valid colours should be provided as we want the function to error if an invalid star is provided.
+The question description does not state not to use recursion in this format and the data definition for star contains fuel as a num which does not state it must be non-negative. This implementation also ensures a star with negative fuel is never returned, but instead 'blackhole will be. Since we require a star to be passed into the function, only the valid colours should be provided as we want the function to error if an invalid star is provided.
 
 Consider the below racket code. This is the implementation of my star-time function and passes the below tests.
 
